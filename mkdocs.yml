@@ -1,0 +1,42 @@
+site_name: Infrastructure Documentation
+site_description: Technical documentation for homelab infrastructure
+repo_url: https://github.com/yourusername/docs
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - content.code.annotate
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+
+plugins:
+  - search
+  - git-revision-date
+
+nav:
+  - Home: index.md
+  - Infrastructure:
+      - Overview: infrastructure/overview.md
+      - Network: infrastructure/network.md
+      - Storage: infrastructure/storage.md
+      - Compute: infrastructure/compute.md
+  - Services:
+      - DNS: services/dns.md
+      - Monitoring: services/monitoring.md
+      - Container Platform: services/containers.md
+  - Automation:
+      - Ansible: automation/ansible.md
+      - Terraform: automation/terraform.md
+
